@@ -10,10 +10,10 @@ pipelineJob('service-A') {
                     branch('*/master')
                 }
             }
-            scriptPath('Jenkinsfile') // Jenkinsfile داخل ریپوی سرویس
+            scriptPath('Jenkinsfile')
         }
     }
     triggers {
-        scm('H/5 * * * *') // هر 5 دقیقه برای چک کردن تغییرات (یا میشه webhook بذاری)
+        scm('H/2 * * * *')
     }
 }
