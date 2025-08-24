@@ -45,7 +45,7 @@ pipelineJob('service-C') {
                 git {
                     remote {
                         url('https://github.com/Maede-alv/react-demo-actions.git')
-                        credentials('github-token')
+                        credentials('git-token1')
                     }
                     branch('*/master')
                 }
