@@ -37,3 +37,23 @@ pipelineJob('service-B') {
         scm('H/2 * * * *')
     }
 }
+
+pipelineJob('service-C') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/Maede-alv/react-demo-actions.git')
+                        credentials('github-token')
+                    }
+                    branch('*/master')
+                }
+            }
+            scriptPath('Jenkinsfile')
+        }
+    }
+    triggers {
+        scm('H/2 * * * *')
+    }
+}
